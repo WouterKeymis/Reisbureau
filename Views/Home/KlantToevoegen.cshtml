@@ -1,0 +1,31 @@
+﻿@model Reisbureau.Models.Klant
+@{
+    ViewData["Title"] = "Welkom op onze pagina!";
+}
+<h1>Welkom op onze website!</h1>
+<h2>Om de reisbrochures te kunnen opsturen vragen we volgende gegevens:</h2>
+<form asp-action="KlantToevoegen" method="post">
+    <label asp-for="Naam"></label>
+    <span asp-validation-for="Naam">*</span>
+    <input asp-for="Naam" />
+    <label asp-for="Voornaam"></label>
+    <span asp-validation-for="Voornaam">*</span>
+    <input asp-for="Voornaam" />
+    <label asp-for="Adres"></label>
+    <span asp-validation-for="Adres">*</span>
+    <input asp-for="Adres" />
+    <label asp-for="Postcode"></label>
+    <span asp-validation-for="Postcode">*</span>
+    <input asp-for="Postcode" />
+    <label asp-for="Gemeente"></label>
+    <span asp-validation-for="Gemeente">*</span>
+    <input asp-for="Gemeente" />
+    <label asp-for="EmailAdres"></label>
+    <span asp-validation-for="EmailAdres">*</span>
+    <input asp-for="EmailAdres" />
+    <label asp-for="TelefoonNummer"></label>
+    <span asp-validation-for="TelefoonNummer">*</span>
+    <input asp-for="TelefoonNummer" />
+    <input type="submit" value="Doorsturen" class="btn btn-primary" />
+    <div asp-validation-summary="All"></div>
+</form>

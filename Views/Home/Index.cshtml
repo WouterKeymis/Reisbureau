@@ -1,0 +1,21 @@
+﻿@model ReisBestemming
+@{
+    ViewData["Title"] = "Brochures";
+}
+<div class="gecentreerd">
+    <h1>Brochures</h1>
+    <h2>Tik jouw reisbestemming</h2>
+    <form asp-action="BestemmingToevoegen" method="post">
+        <input asp-for="Naam" />
+        <input type="submit" value="Toevoegen" class="btn btn-primary" />
+    </form>
+    <h2>Aangevraagde brochures</h2>
+    @if (ViewBag.Brochures != null)
+    {
+        foreach (string brochure in ViewBag.Brochures)
+        {
+            <p>@brochure</p>
+        }
+    }
+</div>
+
