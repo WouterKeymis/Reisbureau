@@ -68,7 +68,7 @@ namespace Reisbureau.Controllers
                 return RedirectToAction("Index");
             }
             else
-                return View(klant);
+                return View(klant); //
         }
         [HttpPost]
         public IActionResult BestemmingToevoegen(ReisBestemming bestemming) 
